@@ -36,16 +36,17 @@
     <Product>Blazor JSInterop Extensions</Product>
     <Copyright>Egil Hansen</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>Makes it easy to call JavaScript functions on DOM elements and set and get properties of objects, without having to write custom JavaScript. 
-    To use, include &lt;script src="_content/BlazorJSInteropExtensions/blazorJsInteropExtensions.js"&gt;&lt;/script&gt; in your index.html or _Host.cshtml.
-    </Description>
+    <Description>Makes it easy to call JavaScript functions on DOM elements and set and get properties of objects, without having to write custom JavaScript.</Description>
     <PackageTags>blazor jsinterop javascript razor-components</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>	
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>	
   </PropertyGroup>
 
   <PropertyGroup>
-    <AnnotatedReferenceAssemblyVersion>3.0.0</AnnotatedReferenceAssemblyVersion>    
+    <AnnotatedReferenceAssemblyVersion>3.0.0</AnnotatedReferenceAssemblyVersion>
+    <RepositoryUrl>https://github.com/egil/BlazorJSInteropExtensions</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/egil/BlazorJSInteropExtensions</PackageProjectUrl>    
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="TunnelVisionLabs.ReferenceAssemblyAnnotator" Version="1.0.0-alpha.90" PrivateAssets="all" />

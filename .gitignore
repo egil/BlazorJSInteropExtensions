@@ -340,3 +340,5 @@ ASALocalRun/
 healthchecksdb
 
 *.ncrunchsolution.user
+
+*.js.map

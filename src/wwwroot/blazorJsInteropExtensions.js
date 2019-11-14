@@ -20,10 +20,10 @@
         var unit = unitRegex ? unitRegex[0] : undefined;
         var result = 0;
         switch (unit) {
-            case "s": // seconds
+            case "s":
                 result = num * 1000;
                 break;
-            case "ms": // milliseconds
+            case "ms":
                 result = num;
                 break;
             default:
@@ -36,15 +36,12 @@
         if (!element)
             return 0;
         var computedStyles = getComputedStyle(element);
-        // Get transition-duration of the element
         var transitionDuration = computedStyles.transitionDuration;
         var transitionDelay = computedStyles.transitionDelay;
         var floatTransitionDuration = parseFloat(transitionDuration);
         var floatTransitionDelay = parseFloat(transitionDelay);
-        // Return 0 if element or transition duration is not found
         if (!floatTransitionDuration && !floatTransitionDelay)
             return 0;
-        // If multiple durations are defined, take the first
         transitionDuration = transitionDuration.split(",")[0];
         transitionDelay = transitionDelay.split(",")[0];
         return (cssTimeToMilliseconds(transitionDuration) +
@@ -102,4 +99,3 @@
     blazorInvokeHelper["setPropOnNamed"] = setPropOnNamed;
     window["blazorInvokeHelper"] = blazorInvokeHelper;
 })();
-//# sourceMappingURL=blazorJsInteropExtensions.js.map
