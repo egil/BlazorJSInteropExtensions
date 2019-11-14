@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>CS8600;CS8602;CS8603;CS8625</WarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptLib>ES5,ES2015,DOM</TypeScriptLib>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>Egil.RazorComponents.BlazorJSInteropExtensions</AssemblyName>
+    <RootNamespace>Egil.RazorComponents.BlazorJSInteropExtensions</RootNamespace>
+    <PackageId>BlazorJSInteropExtensions</PackageId>
+    <Version>0.6.0-preview2</Version>
+    <Authors>Egil Hansen</Authors>
+    <Company>Egil Hansen</Company>
+    <Product>Blazor JSInterop Extensions</Product>
+    <Copyright>Egil Hansen</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Makes it easy to call JavaScript functions on DOM elements and set and get properties of objects, without having to write custom JavaScript. 
+    To use, include &lt;script src="_content/BlazorJSInteropExtensions/blazorJsInteropExtensions.js"&gt;&lt;/script&gt; in your index.html or _Host.cshtml.
+    </Description>
+    <PackageTags>blazor jsinterop javascript razor-components</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>	
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>	
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AnnotatedReferenceAssemblyVersion>3.0.0</AnnotatedReferenceAssemblyVersion>    
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="TunnelVisionLabs.ReferenceAssemblyAnnotator" Version="1.0.0-alpha.90" PrivateAssets="all" />
+    <PackageDownload Include="Microsoft.NETCore.App.Ref" Version="[$(AnnotatedReferenceAssemblyVersion)]" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.0-preview2.19528.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.0-preview2.19528.8" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.7.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
