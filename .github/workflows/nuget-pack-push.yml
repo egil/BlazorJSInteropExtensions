@@ -3,11 +3,11 @@ on:
   push:    
     branches: 
       - master
-  #tags:
-   #   - '*'
+    tags:
+      - '*'
 jobs:  
   build:    
-    name: Push package version ${{ github.ref }} to NUGET
+    name: Push ${{ github.ref }} to NUGET
     runs-on: ubuntu-latest  
     steps:
     - uses: actions/checkout@v1
